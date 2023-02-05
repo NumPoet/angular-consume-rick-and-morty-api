@@ -1,0 +1,38 @@
+<h1 *ngIf="character"> {{ character.name }} </h1>
+<hr>
+
+<div class="row animated fadeIn fast" *ngIf="character">
+  <div class="col-7">
+
+    <h5>Data</h5>
+
+    <ul class="list-group">
+      <li class="list-group-item">Species: {{ character.species}}</li>
+      <li class="list-group-item">Status: {{ character.status}}</li>
+      <li class="list-group-item">Type: {{ character.type }}</li>
+      <li class="list-group-item">Created: {{ character.created }}</li>
+    </ul>
+
+    <hr>
+    <!-- <h5>Fronteras</h5>
+    <ul class="list-group">
+      <li class="list-group-item"
+        *ngFor="let bordes of character.borders">
+          {{ bordes }}
+      </li>
+    </ul> -->
+
+  </div>
+
+  <div class="col-5">
+    <h5>Image</h5>
+
+    <img [src]="character.image" class="bandera" [alt]="character.name">
+    <br>
+    <br>
+    <a class="btn btn-danger btn-block" routerLink="/">
+      Regresar
+    </a>
+
+  </div>
+</div>

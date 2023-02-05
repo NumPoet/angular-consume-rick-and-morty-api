@@ -1,0 +1,9 @@
+<h1>Characters</h1>
+<hr>
+
+
+<ul class="list-group">
+  <a [routerLink]="['/character', character.id]" class="list-group-item list-group-item-action animates fadeIn fast" *ngFor="let character of characters">
+      <img [src]=character.image alt="">  {{character.name}}
+  </a>
+</ul>
